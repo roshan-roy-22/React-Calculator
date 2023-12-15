@@ -62,13 +62,14 @@
 }
 
 .zero {
-  width: 160px;
+  width: 80px;
 }
 
 .equal {
-  height: 160px;
+  height: 80px;
+  width: 160px;
   background-color: #1db954;
-  margin-top: -80px;
+  /* margin-top: -80px; */
 }
 
 .equal:hover {

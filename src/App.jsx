@@ -49,6 +49,17 @@ function App() {
     setAcc("");
   }
 
+   // Function to remove the last character from a string
+   function removeLastCharacter(str) {
+    return str.slice(0, -1);
+}
+
+// ... (other functions)
+
+function RemoveLastCharacter() {
+    setTotal(removeLastCharacter(total));
+}
+
   return (
     <div className="calculator bg-[#121212]">
       <div className="visor">
@@ -68,18 +79,14 @@ function App() {
           value="C"
           onClick={() => ClearAll()}
         />
+        <input type="button" className="button action" value="←" onClick={RemoveLastCharacter} />
         <input
           type="button"
           className="button act bg-[#212121]"
           value="÷"
           onClick={() => AddAction("÷")}
         />
-        <input
-          type="button"
-          className="button act bg-[#212121]"
-          value="x"
-          onClick={() => AddAction("x")}
-        />
+       
         <input
           type="button"
           className="button bg-[#535353]"
@@ -98,11 +105,11 @@ function App() {
           value="9"
           onClick={() => AddNumber("9")}
         />
-        <input
+         <input
           type="button"
           className="button act bg-[#212121]"
-          value="-"
-          onClick={() => AddAction("-")}
+          value="x"
+          onClick={() => AddAction("x")}
         />
         <input
           type="button"
@@ -122,12 +129,13 @@ function App() {
           value="6"
           onClick={() => AddNumber("6")}
         />
-        <input
+         <input
           type="button"
           className="button act bg-[#212121]"
-          value="+"
-          onClick={() => AddAction("+")}
+          value="-"
+          onClick={() => AddAction("-")}
         />
+       
         <input
           type="button"
           className="button bg-[#535353]"
@@ -145,6 +153,12 @@ function App() {
           className="button bg-[#535353]"
           value="3"
           onClick={() => AddNumber("3")}
+        />
+         <input
+          type="button"
+          className="button act bg-[#212121]"
+          value="+"
+          onClick={() => AddAction("+")}
         />
         <input
           type="button"
