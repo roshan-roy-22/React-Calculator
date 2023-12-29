@@ -54,7 +54,6 @@ function App() {
     return str.slice(0, -1);
 }
 
-// ... (other functions)
 
 function RemoveLastCharacter() {
     setTotal(removeLastCharacter(total));
